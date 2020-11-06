@@ -40,6 +40,10 @@
 */
 
 function showValues( obj ) {
+  let string = ``
+  for (let key in obj)
+   string += obj[key]
+   return string
   //Code Here
 }
 
@@ -53,7 +57,11 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+let greaterThan10 = (obj) => {
+  for (let key in obj){
+  obj[key] > 10 ? obj[key] = 0 : obj[key];}
+  return obj
+}//Code Here
 
 
 
@@ -65,7 +73,11 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+let double = (obj) => {
+  for (let key in obj){
+  obj[key] = obj[key] * 2}
+  return obj
+}//Code Here
 
 
 
@@ -79,7 +91,14 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+let secrets = (obj) => {
+  let string = ``
+  for (let key in obj){
+    if (key.includes('sh')) {
+      string += obj[key]
+    }}
+  return string
+}//Code Here
 
 
 
@@ -110,7 +129,10 @@ function showValues( obj ) {
   Delete the property password and return the object.
 */
 
-//Code Here
+let removePassword = (obj) => {
+  delete obj.password
+  return obj
+}//Code Here
 
 
 
@@ -129,7 +151,12 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+let greaterThan100 = (deleteTheBigNumbers) => {
+  for (let key in deleteTheBigNumbers){
+    deleteTheBigNumbers[key] > 100 ? delete deleteTheBigNumbers[key] : deleteTheBigNumbers[key];}
+  return deleteTheBigNumbers
+}
+greaterThan100(deleteTheBigNumbers)//Code Here
 
 
 
@@ -142,7 +169,11 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+let startsWithK = (obj) => {
+  for (let key in obj){
+    key.startsWith(`k`)? delete obj[key] : obj[key]
+  }return obj
+}//Code Here
 
 
 
@@ -157,6 +188,10 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+let hiddenTreasure = (obj) => {
+  for (let key in obj){
+    obj[key].includes('treasure') ? obj[key] = obj[key] : delete obj[key]
+  }return obj
+}//Code Here
 
 
